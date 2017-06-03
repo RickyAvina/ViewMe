@@ -117,6 +117,19 @@ class SettingsController: UIViewController {
         return logL
     }()
     
+    let logoutButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = UIColor(r: 35, g: 98, b: 188)
+        button.setTitle("Register", for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 6
+        button.layer.masksToBounds = true
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        
+        button.addTarget(self, action: #selector(handleLogout), for: .touchUpInside)
+        return button
+    }()
     /* End Account */
     
     override func viewDidLoad() {
@@ -138,6 +151,24 @@ class SettingsController: UIViewController {
         
         view.addSubview(accountContainerView)
         setupAccountContainerView()
+        
+        view.addSubview(logoutLabel)
+        setupLogoutLabels()
+        
+        view.addSubview(logoutButton)
+        setupLogoutButton()
+    }
+    
+    func setupLogoutLabels(){
+        self.view.addConstraint(NSLayoutConstraint(item: logoutLabel, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: accountContainerView, attribute: NSLayoutAttribute.left, multiplier: 1, constant: 14))
+        self.view.addConstraint(NSLayoutConstraint(item: logoutLabel, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: accountContainerView, attribute: NSLayoutAttribute.top, multiplier: 1, constant: 20))
+    }
+    
+    func setupLogoutButton(){
+        logoutButton.rightAnchor.constraint(equalTo: accountContainerView.rightAnchor, constant: -16).isActive = true
+        logoutButton.centerYAnchor.constraint(equalTo: accountContainerView.centerYAnchor).isActive = true
+        logoutButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        logoutButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
     
     func setupAccountContainerView(){
@@ -240,5 +271,9 @@ class SettingsController: UIViewController {
         nameSeparatorView.rightAnchor.constraint(equalTo: settingsContainerView.rightAnchor, constant: -8).isActive = true
         nameSeparatorView.topAnchor.constraint(equalTo: settingsContainerView.topAnchor, constant: 50).isActive = true
         nameSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+    }
+    
+    func handleLogout(){
+        print("Logout")
     }
 }
