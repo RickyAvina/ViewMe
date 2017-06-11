@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DDE8256CF7A753C509DF9AAD /* Pods_ViewMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B42E3121348BDE0F349925 /* Pods_ViewMe.framework */; };
 		ED0F2C9F1EED14EF005CB5A1 /* SettingsController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0F2C9E1EED14EF005CB5A1 /* SettingsController+Extensions.swift */; };
+		ED0F2CA11EED17F0005CB5A1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0F2CA01EED17F0005CB5A1 /* User.swift */; };
+		ED0F2CA31EED1B39005CB5A1 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0F2CA21EED1B39005CB5A1 /* UserCell.swift */; };
 		ED55474B1ED01A3C00B19FF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED55474A1ED01A3C00B19FF3 /* GoogleService-Info.plist */; };
 		ED55474D1ED0E9CF00B19FF3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED55474C1ED0E9CF00B19FF3 /* Extensions.swift */; };
 		ED55474F1ED0F69F00B19FF3 /* UISeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED55474E1ED0F69F00B19FF3 /* UISeparatorView.swift */; };
@@ -26,6 +28,8 @@
 		87A96644B5D7EC6DE48ACFD9 /* Pods-ViewMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViewMe/Pods-ViewMe.debug.xcconfig"; sourceTree = "<group>"; };
 		CA3D9A750CAA9DAA3F03D478 /* Pods-ViewMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViewMe/Pods-ViewMe.release.xcconfig"; sourceTree = "<group>"; };
 		ED0F2C9E1EED14EF005CB5A1 /* SettingsController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingsController+Extensions.swift"; sourceTree = "<group>"; };
+		ED0F2CA01EED17F0005CB5A1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ED0F2CA21EED1B39005CB5A1 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		ED55474A1ED01A3C00B19FF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED55474C1ED0E9CF00B19FF3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		ED55474E1ED0F69F00B19FF3 /* UISeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISeparatorView.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 		EDA97F931EC82B190096BC67 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ED0F2CA01EED17F0005CB5A1 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				ED55474E1ED0F69F00B19FF3 /* UISeparatorView.swift */,
+				ED0F2CA21EED1B39005CB5A1 /* UserCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -267,6 +273,8 @@
 				EDEC2F5D1EC940EE008684BB /* SettingsController.swift in Sources */,
 				ED55474F1ED0F69F00B19FF3 /* UISeparatorView.swift in Sources */,
 				EDA97F831EC82A150096BC67 /* ViewController.swift in Sources */,
+				ED0F2CA11EED17F0005CB5A1 /* User.swift in Sources */,
+				ED0F2CA31EED1B39005CB5A1 /* UserCell.swift in Sources */,
 				EDA97F811EC82A150096BC67 /* AppDelegate.swift in Sources */,
 				EDEC2F5B1EC82DD9008684BB /* HomeController.swift in Sources */,
 				ED0F2C9F1EED14EF005CB5A1 /* SettingsController+Extensions.swift in Sources */,
