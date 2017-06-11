@@ -119,13 +119,13 @@ class SettingsController: UIViewController {
     
     let logoutButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = UIColor(r: 35, g: 98, b: 188)
-        button.setTitle("Register", for: .normal)
-        button.setTitleColor(UIColor.white, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.cornerRadius = 6
+        button.isUserInteractionEnabled = true
+        button.backgroundColor = UIColor(r: 255, g: 255, b: 255)
+        button.setImage(UIImage(named: "logout"), for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
         button.layer.masksToBounds = true
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
         
         button.addTarget(self, action: #selector(handleLogout), for: .touchUpInside)
         return button
